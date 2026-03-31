@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Geolocation Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+
+    <div class="container">
+        <h1>IP Geolocation Tracker</h1>
+        <div class="search-box">
+            <input type="text" id="ipInput" placeholder="Masukkan IP (biarkan kosong untuk IP Anda)">
+            <button onclick="getIPDetails()">Lacak IP</button>
+        </div>
+
+        <div id="result" class="result-card">
+            <div class="info">
+                <p><strong>Alamat IP:</strong> <span id="ipDisplay">-</span></p>
+                <p><strong>Lokasi:</strong> <span id="locationDisplay">-</span></p>
+                <p><strong>ISP:</strong> <span id="ispDisplay">-</span></p>
+                <p><strong>Zona Waktu:</strong> <span id="timezoneDisplay">-</span></p>
+            </div>
+            <div id="map"></div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
